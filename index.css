@@ -1,0 +1,386 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    position: relative;
+    overflow: hidden;
+}
+#page{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+}
+#page>img{
+    position: absolute;
+    right: 5%;
+    top: 60%;
+    transform: translateY(-50%);
+    width: 50%;
+}
+
+#page>#nav{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 0px 30px;
+    position:absolute;
+    height:10%;
+    width:100%;
+    z-index:9;
+    background-color: #fff;
+}
+#center-nav{
+    display: flex;
+    gap: 20px;
+}
+#center-nav>a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.animated-text{
+    font-size: 34px;
+    font-weight: 600;
+}
+.animated-text span{
+    color: #8873ef;
+    position: relative;
+}
+.animated-text span::before{
+    content: "Developer";
+    color: #8873ef;
+    animation: words 20s infinite;
+}
+.animated-text span::after{
+    content: "";
+    position: absolute;
+    width:calc(100% + 8px);
+    height: 100%;
+    background-color: #fff;
+    border-left: 2px solid #8873ef;
+    right: -8px;
+    animation: cursor .20s infinite, typing 20s steps(14) infinite;
+}
+@keyframes cursor{
+    to{
+        border-left: 2px solid black;
+    }
+}
+@keyframes words {
+    0%,20%{
+        content: "Web-Developer";
+    }
+    21%,40%{
+        content: "Web-Designer";
+    }
+    41%,60%{
+        content: "UI-Designer";
+    }
+    61%,80%{
+        content: "Front-End Developer";
+    }
+   
+}
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width:calc(100% + 8px);
+    }
+}
+#text{
+    padding: 30px 50px;
+    position: relative;
+    top: 20%;
+    left: 8%;
+    width: 35%;
+    height: 75%;
+    scale: 1.1;
+}
+#text>h1{
+    margin-top: 20px;
+    font-size: 50px;
+    line-height: 1;
+}
+#text>h1 span{
+    color: #8873ef;
+}
+#text>h2 span{
+    color: #FCDA69;
+}
+#text>h5{
+    color: #8873ef;
+    transform: rotate(-20deg);
+    position: absolute;
+    left: 3%;
+}
+.buttons{
+    position: absolute;
+    left: 0%;
+    bottom: 5%;
+    height: 20%;
+    width: 100%;
+}
+.buttons>button{
+    padding: 10px 22px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 500;
+}
+.buttons>#b1{
+    background-color: #FCDA69;
+    margin-left: 30px;
+    box-shadow: inset 0 0 0 0 tomato;
+    transition: ease-out 0.4s;
+    
+}
+.buttons>#b1:hover{
+     box-shadow: inset 300px 0 0 0 tomato;
+}
+.buttons>#b2{
+    margin-left: 30px;
+    background-color: #8873ef;
+    box-shadow: inset 0 0 0 0 lightseagreen;
+    transition: ease-out 0.4s;
+}
+.buttons>#b2:hover{
+    box-shadow: inset 300px 0 0 0 lightseagreen;
+}
+#page1{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #FCDA69 ;
+}
+#page1>#left{
+    position: absolute;
+    right:5%;
+    height: 90%;
+    width: 35%;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: red;
+}
+#left>.box{
+    height: 33.3%;
+    width: 100%;
+    background-color:#FCDA69;
+    border-top: 2px solid black;
+}
+.circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3vw;
+    width: 3vw;
+    background-color: #8873ef;
+    border-radius: 50%;
+}
+.circle>i{
+    color: #fff;
+    font-size: 25px;
+}
+.text1{
+    margin: 50px 50px;
+    height: 30%;
+    width: 50%;
+    position: absolute;
+    z-index: 9;
+}
+.text1>h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+.text1>h1 span{
+    color: #8873ef;
+}
+.text1>h4{
+    font-size: 17px;
+    color: #2b2b2b;
+    font-weight: 500;
+    width: 70%;
+    margin-top: 20px;
+}
+.text1>h5{
+    color: #8873ef;
+    transform: rotate(-20deg);
+    position: absolute;
+    left: -2%;
+}
+.page2{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+}
+#projects{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50%;
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5%;
+}
+.project{
+    border-top: 2px solid black;
+    height: 100%;
+    width: 31%;
+}
+#text3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+    height: 30%;
+    width: 100%;
+}
+.image1{
+    height: 70%;
+    width: 100%;
+    background-image: url(https://img.freepik.com/free-vector/people-analyzing-growth-charts-together_23-2148850251.jpg?w=740&t=st=1703333012~exp=1703333612~hmac=39df11a680254a5732bfa833e648c4bb12b2d3c9f0a9cec2502530d98ad5cf76);
+    background-size: cover;
+    background-position: 0%;
+}
+.image2{
+    height: 70%;
+    width: 100%;
+    background-image: url(https://img.freepik.com/premium-vector/work-team-is-meeting-progress-investment-business_18660-3112.jpg);
+    background-size: cover;
+    background-position: 0%;
+}
+.image3{
+    height: 70%;
+    width: 100%;
+    background-image: url(https://img.freepik.com/premium-vector/isometric-expert-team-data-analysis-business-statistic-management-consulting-marketing-financial-administration-audit-business-statement-concept_589019-3792.jpg);
+    background-size: cover;
+    background-position: 0%;
+}
+.p2{
+   position: relative;
+   top: -25%;
+}
+.p3{
+    position: relative;
+    top: -60%;
+ }
+ #text4{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    height: 20%;
+    width: 30%;
+ }
+ #text4>h1{
+    margin-top: 20px;
+    font-size: 50px;
+ }
+ #text4>h1 span{
+    color: #8873ef;
+}
+/**footer**/
+
+
+.page3{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding: 0px 60px;
+    align-items:center ;
+    height: 100vh;
+    width: 100vw;
+    background-color: #FCDA69;
+}
+#left1{
+    height: 70%;
+    width: 35%;
+   
+}
+#right1{
+    height: 40vw;
+    width: 40vw;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+.line{
+    position:relative;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    padding: 0px 30px;
+    justify-content: space-between;
+    height: 10%;
+    width: 100%;
+}
+.l1{
+    position: absolute;
+    z-index: 99;
+}
+.l2{
+    position: relative;
+    left: 10%;
+    top: 47%;
+    width: 45%;
+    border-bottom: 2px solid black;
+    position: absolute;
+    transform: rotate(15deg);
+    transform-origin: left;
+}
+#text5{
+    position: relative;
+    height: 30%;
+    width: 100%;
+   
+}
+#text5>h1{
+    padding-top: 20px;
+    font-size: 60px;
+}
+#text5>h5{
+    color: #8873ef;
+    position: absolute;
+    transform: rotate(-20deg);
+    top: 0%;
+    left: 0%;
+}
+#info{
+    margin-top: 50px;
+    height: 50%;
+    width: 100%;
+   
+}
+.infos{
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    padding-left: 20px;
+    height: 50%;
+    width: 100%;
+   
+    border-top: 2px solid black;
+}
+.infos>h1{
+    font-size: 25px;
+}
+.i1{
+    background-color: #fff;
+}
+.i1>i{
+    color: black;
+}
